@@ -1,0 +1,2 @@
+   https://python.input.sk/
+   po moduly math random
