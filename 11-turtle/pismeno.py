@@ -47,7 +47,19 @@ def A(dlzka):
     t.pendown()
     riadok(dlzka)
 
+    t.penup()
+    t.lt(90)
+    t.fd(3*dlzka)
+    t.lt(90)
+    t.fd(3*dlzka)
+    t.lt(180)
+
+
 A(dlzka)
 
+t.fd(dlzka*6)
+t.pendown()
+
+A(dlzka)
 
 turtle.mainloop()
