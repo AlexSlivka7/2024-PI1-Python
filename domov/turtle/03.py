@@ -1,6 +1,6 @@
 import turtle,random
 t = turtle.Turtle()
-turtle.delay(0)
+turtle.delay(10)
 
 def dom(d):
     def stvorec(dlzka):
