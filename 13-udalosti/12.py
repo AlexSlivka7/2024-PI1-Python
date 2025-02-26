@@ -1,21 +1,22 @@
 import tkinter
 
-def tahaj(event):
+def cervena(event):
     x, y = event.x, event.y
-    canvas.create_oval(x - 5, y - 5, x + 5, y + 5, fill= farba)
+    canvas.create_oval(x - 5, y - 5, x + 5, y + 5, fill="red")
+
+def modra(event):
+    x, y = event.x, event.y
+    canvas.create_oval(x - 5, y - 5, x + 5, y + 5, fill="blue")
 
 def zmaz(delete):
     canvas.delete("all")
 
-def red():
-    farba = "red"
 
 
 canvas = tkinter.Canvas()
 canvas.pack(side="left")
-farba = tkinter.Button(bg="red",command=red)
-farba.pack()
-canvas.bind('<B1-Motion>', tahaj)
+canvas.bind('<B1-Motion>', cervena)
+canvas.bind("<B3-Motion>",modra)
 canvas.bind("<ButtonPress-2>",zmaz)
 
 
