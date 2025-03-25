@@ -1,5 +1,35 @@
-moznost = input("Ak chceš šifrovať zadaj 1 ak chceš dešifrovať zadaj 2 : ")
-if moznost == str(1):
-    ret = input("Zadaj slovo ktoré chceš zašifrovať: ")
-    za_ret = (ord(ret)+1)
-    print(chr(za_ret))
+while True:
+    print("[1] pre zasifrovanie")
+    print("[2] pre rozsifrovanie")
+    print("[3] pre ukoncenie")
+
+    choise = input("Vyber cislo: ")
+    text2 = ""
+
+    if choise == "1":
+        text = input("Zadaj text: ")
+        text = text.lower()
+        for i in text:
+            char = ord(i)+1
+            if char == 123:
+                char = 97
+            text2 += chr(char)
+        print("Zasifrovany text: ",text2)
+        print("----------------")
+
+    elif choise == "2":
+        text = input("Zadaj text: ")
+        text = text.lower()
+        for i in text:
+            char = ord(i)-1
+            if char == 96:
+                char = 122
+            text2 += chr(char)
+        print("Rozsifrovany text:",text2)
+        print("----------------")
+        
+    elif choise == "3":
+        break
+    else:
+        print("zla volba")
+        print("----------------")
