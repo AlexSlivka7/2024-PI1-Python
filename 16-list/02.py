@@ -20,8 +20,15 @@ for i in range(pocet_dni):
 priemerna_teplota = sucet/pocet_dni
 print(f"Priemerna teplota v mesiaci je {priemerna_teplota}°C")
 
-
+print(" ")
+print("Dni s teplotou nižšiou ako priemerná teplota: ")
 for i in range(pocet_dni):
     if teploty[i] < priemerna_teplota:
+        print(f"{i+1}.deň - {teploty[i]} °C")
+
+print(" ")
+print("Dni s teplotou vyššou ako priemerná teplota: ")
+for i in range(pocet_dni):
+    if teploty[i] > priemerna_teplota:
         print(f"{i+1}.deň - {teploty[i]} °C")
 
