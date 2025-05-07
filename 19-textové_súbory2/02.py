@@ -3,7 +3,7 @@ canvas = tk.Canvas(width=800, height=800)
 canvas.pack()
 ftvary = open("tvary.txt", "w")
 tvary = ["o","r","l"]
-pocet = 20
+pocet = 10
 
 def nahodná_farba():
     return f"#{random.randint(0, 255):02x}{random.randint(0, 255):02x}{random.randint(0, 255):02x}"
@@ -15,6 +15,7 @@ for i in range(pocet):
     print(random.choice(tvary) , random.randint(3,797),random.randint(3,797),random.randint(50,250),nahodná_farba(),file=ftvary)
 
 ftvary = open("tvary.txt", "r")
+
 for i in range(pocet):
     riadok = ftvary.readline()
     tvar, xz, yz, velkost, farba = riadok.split()
