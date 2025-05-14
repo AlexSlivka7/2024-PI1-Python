@@ -17,6 +17,10 @@ ftvary = open("tvary.txt", "r")
 for i in range(10):
     riadok = ftvary.readline()
     tvar, xz, yz, xk, yk, farba = riadok.split()
+    xz = int(xz)
+    yz = int(yz)
+    xk = int(xk)
+    yk = int(yk)
 
     if tvar == "o":
         canvas.create_oval(xz,yz,xk,yk,fill=farba)
